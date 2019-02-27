@@ -12,7 +12,7 @@ As discussed in the [parameter files](03-parameters-files.md#parameters-files) t
 
 To do this, navigate to the toolkit's [archetypes/iaas](../archetypes/iaas) folder, then make a copy of the *archetype.test.json*, and name this copy *archetype.json*. Then proceed to edit archetype.json providing the subscription, organization, networking, and other configuration information that you want to use for your deployment. Make sure you use values for the hub and on-premises parameters consistent with those components of your VDC deployment.
 
-If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this archetype.json file from being pushed to your code repository.
+If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this config.json file from being pushed to your code repository.
 
 ## Deploy workload infrastructure
 
@@ -32,15 +32,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/iaas/archetype.json" -m "la"*
+>   *python3 vdc.py create workload -path "archetypes/iaas/config.json" -m "la"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "la"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "la"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/iaas/archetype.json" -m "la"*
+>   *python vdc.py create workload -path "archetypes/iaas/config.json" -m "la"*
 
 This deployment creates the *{organization name}-{deployment name}-la-rg*
 resource group that hosts the resources in the following table.
@@ -64,15 +64,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/iaas/archetype.json" -m "workload-kv"*
+>   *python3 vdc.py create workload -path "archetypes/iaas/config.json" -m "workload-kv"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "workload-kv"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "workload-kv"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/iaas/archetype.json" -m "workload-kv"*
+>   *python vdc.py create workload -path "archetypes/iaas/config.json" -m "workload-kv"*
 
 This deployment creates the *{organization name}-{deployment name}-kv-rg*
 resource group that hosts the resources listed in the following table.
@@ -104,30 +104,30 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/iaas/archetype.json" -m "nsg"*
+>   *python3 vdc.py create workload -path "archetypes/iaas/config.json" -m "nsg"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "nsg"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "nsg"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/iaas/archetype.json" -m "nsg"*
+>   *python vdc.py create workload -path "archetypes/iaas/config.json" -m "nsg"*
 
 Then start the "net" deployment by running the following command in the terminal
 or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/iaas/archetype.json" -m "workload-net"*
+>   *python3 vdc.py create workload -path "archetypes/iaas/config.json" -m "workload-net"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "workload-net"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "workload-net"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/iaas/archetype.json" -m "workload-net"*
+>   *python vdc.py create workload -path "archetypes/iaas/config.json" -m "workload-net"*
 
 These deployments create the *{organization name}-{deployment name}-net-rg*
 resource group that hosts the resources detailed in the following table.
@@ -160,15 +160,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/iaas/archetype.json" -m "sqlserver-alwayson"*
+>   *python3 vdc.py create workload -path "archetypes/iaas/config.json" -m "sqlserver-alwayson"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "sqlserver-alwayson"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "sqlserver-alwayson"*
 
 [Docker]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "sqlserver-alwayson"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "sqlserver-alwayson"*
 
 This deployment creates the *{organization name}-{deployment
 name}-sqlserver-alwayson-rg* resource group that hosts the following resources.
@@ -203,15 +203,15 @@ Start this deployment by running the following command in the terminal or comman
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/iaas/archetype.json" -m "*vmapp-web-lb*"*
+>   *python3 vdc.py create workload -path "archetypes/iaas/config.json" -m "*vmapp-web-lb*"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "*vmapp-web-lb*"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "*vmapp-web-lb*"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/iaas/archetype.json" -m "*vmapp-web-lb*"*
+>   *python vdc.py create workload -path "archetypes/iaas/config.json" -m "*vmapp-web-lb*"*
 
 This deployment creates the *{organization name}-{deployment name}-web-rg*
 resource group that hosts the resources detailed in the following table.
@@ -239,15 +239,15 @@ or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/iaas/archetype.json" -m "app-gateway"*
+>   *python3 vdc.py create workload -path "archetypes/iaas/config.json" -m "app-gateway"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/iaas/archetype.json" -m "app-gateway"*
+>   *py vdc.py create workload -path "archetypes/iaas/config.json" -m "app-gateway"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/iaas/archetype.json" -m "app-gateway"*
+>   *python vdc.py create workload -path "archetypes/iaas/config.json" -m "app-gateway"*
 
 This deployment will deploy resource to the hub subscription's *{organization name}-{hub name}-net-rg*
 resource group that hosts the resources detailed in the following table.
@@ -269,15 +269,15 @@ Start this deployment by running the following command in the terminal or comman
 
 [Linux/OSX]
 
->   *python3 vdc.py workload -path "archetypes/iaas/archetype.json" -m "*vmapp-biz-lb*"*
+>   *python3 vdc.py workload -path "archetypes/iaas/config.json" -m "*vmapp-biz-lb*"*
 
 [Windows]
 
->   *py vdc.py workload -path "archetypes/iaas/archetype.json" -m "*vmapp-biz-lb*"*
+>   *py vdc.py workload -path "archetypes/iaas/config.json" -m "*vmapp-biz-lb*"*
 
 [Docker]
 
->   *python vdc.py workload -path "archetypes/iaas/archetype.json" -m "*vmapp-biz-lb*"*
+>   *python vdc.py workload -path "archetypes/iaas/config.json" -m "*vmapp-biz-lb*"*
 
 This deployment creates the *{organization name}-{deployment name}-biz-rg*
 resource group that hosts the resources listed in the following table.

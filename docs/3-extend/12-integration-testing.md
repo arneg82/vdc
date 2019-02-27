@@ -136,7 +136,7 @@ _configuration_path* depending on the deployment type) that will need to point t
         parameters_file = ''
 
         if self.is_live:
-            parameters_file = 'archetype.json'
+            parameters_file = 'config.json'
         else:
             parameters_file = 'archetype.test.json'
         

@@ -31,15 +31,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "la"*
+>   *python3 vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "la"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "la"*
+>   *py vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "la"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "la"*
+>   *python vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "la"*
 
 This deployment creates the *{organization name}-{deployment name}-la-rg*
 resource group that hosts the resources in the following table.
@@ -63,15 +63,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "workload-kv"*
+>   *python3 vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "workload-kv"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "workload-kv"*
+>   *py vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "workload-kv"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "workload-kv"*
+>   *python vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "workload-kv"*
 
 This deployment creates the *{organization name}-{deployment name}-kv-rg*
 resource group that hosts the resources listed in the following table.
@@ -103,30 +103,30 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "nsg"*
+>   *python3 vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "nsg"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "nsg"*
+>   *py vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "nsg"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "nsg"*
+>   *python vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "nsg"*
 
 Then start the "net" deployment by running the following command in the terminal
 or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "workload-net"*
+>   *python3 vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "workload-net"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "workload-net"*
+>   *py vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "workload-net"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "workload-net"*
+>   *python vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "workload-net"*
 
 These deployments create the *{organization name}-{deployment name}-net-rg*
 resource group that hosts the resources detailed in the following table.
@@ -154,15 +154,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "cb"*
+>   *python3 vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "cb"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "cb"*
+>   *py vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "cb"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "cb"*
+>   *python vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "cb"*
 
 This deployment creates the *{organization name}-{deployment
 name}-cb-rg* resource group that hosts the resources listed in
@@ -187,15 +187,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "kdc"*
+>   *python3 vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "kdc"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "kdc"*
+>   *py vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "kdc"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/cloudbreak/archetype.json" -m "kdc"*
+>   *python vdc.py create workload -path "archetypes/cloudbreak/config.json" -m "kdc"*
 
 This deployment creates the *{organization name}-{deployment
 name}-kdc-rg* resource group that hosts the resources listed in

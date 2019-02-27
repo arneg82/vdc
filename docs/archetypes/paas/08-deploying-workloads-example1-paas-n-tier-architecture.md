@@ -16,7 +16,7 @@ As discussed in the [parameter files](03-parameters-files.md#parameters-files) t
 
 To do this, navigate to the toolkit's [archetypes/paas](../archetypes/paas) folder, then make a copy of the *archetype.test.json*, and name this copy *archetype.json*. Then proceed to edit archetype.json providing the subscription, organization, networking, and other configuration information that you want to use for your deployment. Make sure you use values for the shared services and on-premises parameters consistent with those components of your VDC deployment.
 
-If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this archetype.json file from being pushed to your code repository.
+If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this config.json file from being pushed to your code repository.
 
 ## Deploy workload infrastructure
 
@@ -35,15 +35,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/paas/archetype.json" -m "la"*
+>   *python3 vdc.py create workload -path "archetypes/paas/config.json" -m "la"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/paas/archetype.json" -m "la"*
+>   *py vdc.py create workload -path "archetypes/paas/config.json" -m "la"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/paas/archetype.json" -m "la"*
+>   *python vdc.py create workload -path "archetypes/paas/config.json" -m "la"*
 
 This deployment creates the *{organization name}-{deployment name}-la-rg*
 resource group that hosts the resources in the following table.
@@ -65,16 +65,16 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/paas/archetype.json" -m "workload-kv"*
+>   *python3 vdc.py create workload -path "archetypes/paas/config.json" -m "workload-kv"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/paas/archetype.json"
+>   *py vdc.py create workload -path "archetypes/paas/config.json"
 >   -m "workload-kv"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/paas/archetype.json"
+>   *python vdc.py create workload -path "archetypes/paas/config.json"
 >   -m "workload-kv"*
 
 This deployment creates the *{organization name}-{deployment name}-kv-rg*
@@ -107,30 +107,30 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/paas/archetype.json" -m "nsg"*
+>   *python3 vdc.py create workload -path "archetypes/paas/config.json" -m "nsg"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/paas/archetype.json" -m "nsg"*
+>   *py vdc.py create workload -path "archetypes/paas/config.json" -m "nsg"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/paas/archetype.json" -m "nsg"*
+>   *python vdc.py create workload -path "archetypes/paas/config.json" -m "nsg"*
 
 Then start the "net" deployment by running the following command in the terminal
 or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/paas/archetype.json" -m "workload-net"*
+>   *python3 vdc.py create workload -path "archetypes/paas/config.json" -m "workload-net"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/paas/archetype.json" -m "workload-net"*
+>   *py vdc.py create workload -path "archetypes/paas/config.json" -m "workload-net"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/paas/archetype.json" -m "workloadnet"*
+>   *python vdc.py create workload -path "archetypes/paas/config.json" -m "workloadnet"*
 
 These deployments create the *{organization name}-{deployment name}-net-rg*
 resource group that hosts the resources detailed in the following table.
@@ -156,15 +156,15 @@ running the following command in the terminal or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/paas/archetype.json" -m "*sqldb*"*
+>   *python3 vdc.py create workload -path "archetypes/paas/config.json" -m "*sqldb*"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/paas/archetype.json" -m "*sqldb*"*
+>   *py vdc.py create workload -path "archetypes/paas/config.json" -m "*sqldb*"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/paas/archetype.json" -m "*sqldb*"*
+>   *python vdc.py create workload -path "archetypes/paas/config.json" -m "*sqldb*"*
 
 This deployment creates the *{organization name}-{deployment name}-sqldb-rg*
 resource group that hosts the resources shown in the following table.
@@ -183,15 +183,15 @@ following command in the terminal or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/paas/archetype.json" -m "*ase*"*
+>   *python3 vdc.py create workload -path "archetypes/paas/config.json" -m "*ase*"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/paas/archetype.json" -m "*ase*"*
+>   *py vdc.py create workload -path "archetypes/paas/config.json" -m "*ase*"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/paas/archetype.json" -m "*ase*"*
+>   *python vdc.py create workload -path "archetypes/paas/config.json" -m "*ase*"*
 
 This deployment creates the *{organization name}-{deployment name}-ase-rg*
 resource group that hosts the following resources:
