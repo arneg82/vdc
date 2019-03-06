@@ -18,16 +18,23 @@ Once this is complete, you can launch a deployment from the terminal/command-lin
 
 `[Linux/OSX]`
 
-> `python3 vdc.py create {environment type} {arguments}`
+> `python3 vdc.py {command} {environment type} {arguments}`
 
 `[Windows]:`
 
-> `py vdc.py create {environment type} {arguments}`
+> `py vdc.py {command} {environment type} {arguments}`
 
 `[Docker]`
 
-> `python vdc.py create {environment type} {arguments}`
+> `python vdc.py {command} {environment type} {arguments}`
 
+## Command
+
+There are two commands you can supply. 
+
+- `create` executes a deployment. 
+- `validate` executes a validation of the deployment. Note that some resources may actu
+ally be deployed during a validation.
 
 ## Environment types
 
@@ -89,3 +96,20 @@ If the user running this command does not have the correct permissions to run al
 --prevent-vdc-storage-creation
 ```
 [Optional] - By default, deployments will create a new storage account for output and scripts if one does not exist. Including this argument will prevent this, and only deploy if the target storage account exists. Storage account name is set in the archetype configuration file in the `vdc-storage-account-name` parameter.
+
+## Example
+
+This example deploys the paas archetype and uploads the scripts folder.
+
+`[Docker]`
+
+> `python vdc.py create workload -path ./archetypes/paas/archetype.json --upload-scripts`
+
+`[Linux/OSX]`
+
+> `python3 vdc.py create workdload -path ./archetypes/paas/archetype.json --upload-scripts`
+
+`[Windows]:`
+
+> `py vdc.py create workdload -path ./archetypes/paas/archetype.json --upload-scripts`
+
