@@ -31,7 +31,7 @@ The folder name for each module deployment is used as its ID elsewhere in the to
 - `azureDeploy.json` for deployment templates
 - `azureDeploy.parameters.json` for parameters.
 
-As an example, if you were creating a deployment to create a Hadoop server in your archetype, you would use the following file paths to store the config.json:
+As an example, if you were creating a deployment to create a Hadoop server in your archetype, you would use the following file paths to store the archetype.json:
 
 - `modules/hadoop/v1/azureDeploy.json`
 - `modules/hadoop/v1/azureDeploy.parameters.json`
@@ -78,7 +78,7 @@ When adding a new module, you must at a minimum supply a module name and version
 
 See the [parameters documentation](03-parameters-files.md#common-module-dependency-parameters) for full details of the module definition object.
 
-As an example, we can create a definition for our Hadoop example module. It is currently version 1.0 and needs to pull in values from the workload's "net" deployment module output. To add this definition, you will add the following definition to the archetypes/custom-workload-name/config.json file's module-dependencies object:
+As an example, we can create a definition for our Hadoop example module. It is currently version 1.0 and needs to pull in values from the workload's "net" deployment module output. To add this definition, you will add the following definition to the archetypes/custom-workload-name/archetype.json file's module-dependencies object:
 
 ```json
 {

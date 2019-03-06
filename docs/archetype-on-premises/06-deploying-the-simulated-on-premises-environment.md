@@ -33,17 +33,17 @@ or command-line interface:
 [Linux/OSX]
 
 >   *python3 vdc.py create on-premises -path
->   "archetypes/on-premises/config.json" --upload-scripts*
+>   "archetypes/on-premises/archetype.json" --upload-scripts*
 
 [Windows]
 
 >   *py vdc.py create on-premises -path
->   "archetypes/on-premises/config.json" --upload-scripts*
+>   "archetypes/on-premises/archetype.json" --upload-scripts*
 
 [Docker]
 
 >   *python vdc.py create on-premises -path
->   "archetypes/on-premises/config.json" --upload-scripts*
+>   "archetypes/on-premises/archetype.json" --upload-scripts*
 
 This deployment creates two resource groups:
 

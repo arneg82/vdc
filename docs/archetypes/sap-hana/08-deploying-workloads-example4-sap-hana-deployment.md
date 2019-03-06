@@ -14,7 +14,7 @@ As discussed in the [parameter files](03-parameters-files.md#parameters-files) t
 
 To do this, navigate to the toolkit's [archetypes/sap-hana](../archetypes/sap-hana) folder, then make a copy of the *archetype.test.json*, and name this copy *archetype.json*. Then proceed to edit archetype.json providing the subscription, organization, networking, and other configuration information that you want to use for your deployment. Make sure you use values for the hub and on-premises parameters consistent with those components of your VDC deployment.
 
-If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this config.json file from being pushed to your code repository.
+If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this archetype.json file from being pushed to your code repository.
 
 ## Deploy workload infrastructure
 
@@ -32,15 +32,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "la"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "la"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "la"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "la"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "la"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "la"*
 
 This deployment creates the *{organization name}-{deployment name}-la-rg*
 resource group that hosts the resources in the following table.
@@ -64,15 +64,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "workload-kv"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "workload-kv"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "workload-kv"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "workload-kv"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "workload-kv"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "workload-kv"*
 
 This deployment creates the *{organization name}-{deployment name}-kv-rg*
 resource group that hosts the resources listed in the following table.
@@ -104,30 +104,30 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "nsg"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "nsg"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "nsg"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "nsg"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "nsg"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "nsg"*
 
 Then start the "net" deployment by running the following command in the terminal
 or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "workload-net"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "workload-net"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "workload-net"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "workload-net"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "workload-net"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "workload-net"*
 
 These deployments create the *{organization name}-{deployment name}-net-rg*
 resource group that hosts the resources detailed in the following table.
@@ -157,15 +157,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "iscsi"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "iscsi"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "iscsi"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "iscsi"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "iscsi"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "iscsi"*
 
 This deployment creates the *{organization name}-{deployment
 name}-iscsi-rg* resource group that hosts the resources listed in
@@ -188,15 +188,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "nfs"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "nfs"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "nfs"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "nfs"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "nfs"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "nfs"*
 
 This deployment creates the *{organization name}-{deployment
 name}-nfs-rg* resource group that hosts the resources listed in
@@ -221,15 +221,15 @@ Start the "hana" deployment by running the following command in the terminal or 
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "hana"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "hana"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "hana"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "hana"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "hana"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "hana"*
 
 This deployment creates the *{organization name}-{deployment
 name}-hana-rg* resource group that hosts the resources listed in
@@ -272,15 +272,15 @@ Start the "ascs" deployment by running the following command in the terminal or 
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "ascs"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "ascs"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "ascs"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "ascs"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "ascs"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "ascs"*
 
 This deployment creates the *{organization name}-{deployment
 name}-ascs-rg* resource group that hosts the resources listed in
@@ -315,15 +315,15 @@ Start the "netweaver" deployment by running the following command in the termina
 
 [Linux/OSX]
 
->   *python3 vdc.py create workload -path "archetypes/sap-hana/config.json" -m "netweaver"*
+>   *python3 vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "netweaver"*
 
 [Windows]
 
->   *py vdc.py create workload -path "archetypes/sap-hana/config.json" -m "netweaver"*
+>   *py vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "netweaver"*
 
 [Docker]
 
->   *python vdc.py create workload -path "archetypes/sap-hana/config.json" -m "netweaver"*
+>   *python vdc.py create workload -path "archetypes/sap-hana/archetype.json" -m "netweaver"*
 
 This deployment creates the *{organization name}-{deployment
 name}-netweaver-rg* resource group that hosts the resources listed in

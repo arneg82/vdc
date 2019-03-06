@@ -51,19 +51,19 @@ Run `az ad signed-in-user show`
 
 If you prefer, you can also retrieve these values from with the Azure Portal but that it outside the scope of this tutorial.
 
-## Editing the archetype config.json
+## Editing the archetype archetype.json
 
 We need to create an instance of the configuration for the on-premises archetype using value unique to our deployment.
 
-1. Locate the sample configuration at [`archetypes/on-premises/config.test.json`](../archetypes/on-premises/config.test.json).
-1. Copy the sample configuration and name it `config.json`. It should be place in `archetypes/on-premises/`.
+1. Locate the sample configuration at [`archetypes/on-premises/archetype.test.json`](../archetypes/on-premises/archetype.test.json).
+1. Copy the sample configuration and name it `archetype.json`. It should be place in `archetypes/on-premises/`.
 1. Open the new configuration and make these changes:
     - Replace the two instances of `"subscription-id"` with your subscription ID. One is located in `"shared-services"` and the other in `"on-premises"`.
     - Replace `"tenant-id"` under `"general"` with your AAD tenant ID.
     - Replace `"deployment-user-id"` with your AAD user object ID.
     - Provide a unique name for `"vdc-storage-account-name"`. This must be a globally unique name since it is used to construct a URI for a structure account.
     - Provide a password value for `"domain-admin-password"`.
-1. Save `config.json`.
+1. Save `archetype.json`.
 
 > If you want to know more about the setting, please see TODO.
 
@@ -77,15 +77,15 @@ Return to your terminal/command-line interface and navigate to the root of the t
 
 *[Docker]*
 
-`python vdc.py create on-premises -path archetypes/on-premises/config.json --upload-scripts`
+`python vdc.py create on-premises -path archetypes/on-premises/archetype.json --upload-scripts`
 
 *[Linux/OSX]*
 
-`python3 vdc.py create on-premises -path archetypes/on-premises/config.json --upload-scripts`
+`python3 vdc.py create on-premises -path archetypes/on-premises/archetype.json --upload-scripts`
 
 *[Windows]:*
 
-`py vdc.py create on-premises -path archetypes/on-premises/config.json --upload-scripts`
+`py vdc.py create on-premises -path archetypes/on-premises/archetype.json --upload-scripts`
 
 The toolkit will initiate the deployment and provide status updates.
 

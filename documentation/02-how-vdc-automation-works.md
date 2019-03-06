@@ -1,6 +1,6 @@
 ## Sample deployments
 
-A VDC deployment uses a deployment configuration file (config.json) which defines the unique settings and configuration for shared services, workload, or sample on-premises resources you're deploying. These configuration files reference resource deployment modules, which are the building blocks the automation scripts use to provision specific resources on the azure platform.
+A VDC deployment uses a deployment configuration file (archetype.json) which defines the unique settings and configuration for shared services, workload, or sample on-premises resources you're deploying. These configuration files reference resource deployment modules, which are the building blocks the automation scripts use to provision specific resources on the azure platform.
 
 The toolkit provides several sample deployments built for Contoso, a fictional
 organization. You can use these samples for testing VDC automation and as a

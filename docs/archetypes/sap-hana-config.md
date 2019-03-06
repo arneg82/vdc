@@ -1,7 +1,7 @@
 
 ### sap-hana deployment parameters (workload section)
 
-These parameters are specific to the [sap-hana](../archetypes/sap-hana/config.test.json) workload deployment.
+These parameters are specific to the [sap-hana](../archetypes/sap-hana/archetype.test.json) workload deployment.
 
 | **Parameter name**            | **Type**               | **Description**                                                                                                                                                                                                                                                                                                                                     |
 |-------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

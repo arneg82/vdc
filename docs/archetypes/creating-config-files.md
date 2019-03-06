@@ -7,12 +7,12 @@ Configuration files are found in the following locations:
 
 | **Sample Deployment**          | **Configuration file location**    |
 |-----------------------------|-----------------------------|
-|Simulated on-premises |[archetypes/on-premises/config.test.json](../archetypes/on-premises/config.test.json)|
-| shared-services |[archetypes/shared-services/config.test.json](../archetypes/shared-services/config.test.json)|
-| paas |[archetypes/paas/config.test.json](../archetypes/paas/config.test.json)|
-| iaas |[archetypes/iaas/config.test.json](../archetypes/iaas/config.test.json)|
-| cloudbreak |[archetypes/cloudbreak/config.test.json](../archetypes/cloudbreak/config.test.json)|
-| sap-hana |[archetypes/sap-hana/config.test.json](../archetypes/sap-hana/config.test.json)|
+|Simulated on-premises |[archetypes/on-premises/archetype.test.json](../archetypes/on-premises/archetype.test.json)|
+| shared-services |[archetypes/shared-services/archetype.test.json](../archetypes/shared-services/archetype.test.json)|
+| paas |[archetypes/paas/archetype.test.json](../archetypes/paas/archetype.test.json)|
+| iaas |[archetypes/iaas/archetype.test.json](../archetypes/iaas/archetype.test.json)|
+| cloudbreak |[archetypes/cloudbreak/archetype.test.json](../archetypes/cloudbreak/archetype.test.json)|
+| sap-hana |[archetypes/sap-hana/archetype.test.json](../archetypes/sap-hana/archetype.test.json)|
 
 
 The settings in these files are broken into sections. The deployment parameters
@@ -26,11 +26,11 @@ parameters that apply to the resources deployed for the workload itself.
 
 **Important note:** *These configuration.**test**.json* files are not the actual files your deployments will use. The test versions of these files are a starting example and used as part of [integration testing](../12-integration-testing.md).
 
-During your initial setup and preparation for any of the sample deployment types, you will need to make a copy of the sample test file and rename it *config.json*. This file should remain in the same folder as the copied test file. 
+During your initial setup and preparation for any of the sample deployment types, you will need to make a copy of the sample test file and rename it *archetype.json*. This file should remain in the same folder as the copied test file. 
 
-The config.json file is where you will enter your subscription, tenant, organizational, and VDC configuration information. Do not modify or delete the test file, as the values defined there are required to support integration testing.
+The archetype.json file is where you will enter your subscription, tenant, organizational, and VDC configuration information. Do not modify or delete the test file, as the values defined there are required to support integration testing.
 
-Because they contain potentially sensitive information such as subscription IDs and user names, the default VDC Automation Toolkit [.gitignore](../.gitignore) file is set to prevent your deployment config.json files from being pushed to your code repository. Other users are expected to create their own versions of these files using the copy process noted above.
+Because they contain potentially sensitive information such as subscription IDs and user names, the default VDC Automation Toolkit [.gitignore](../.gitignore) file is set to prevent your deployment archetype.json files from being pushed to your code repository. Other users are expected to create their own versions of these files using the copy process noted above.
 
 ## Referencing parameters 
 

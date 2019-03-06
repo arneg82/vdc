@@ -1,7 +1,7 @@
 
 ## Shared workload deployment parameters
 
-These parameters are used in all workload deployment parameters file. See sample [PaaS workload deployment for an example](../archetypes/paas/config.test.json).
+These parameters are used in all workload deployment parameters file. See sample [PaaS workload deployment for an example](../archetypes/paas/archetype.test.json).
 
 ### On-premises settings (Workload parameters file)
 

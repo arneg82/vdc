@@ -1,6 +1,6 @@
 ## Shared-services deployment parameters
 
-These parameters are defined in the shared-services configuration file (/archetypes/shared-services/config.json).
+These parameters are defined in the shared-services configuration file (/archetypes/shared-services/archetype.json).
 
 ### On-premises settings (Shared-services parameters file)
 

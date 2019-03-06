@@ -17,11 +17,11 @@ Some of the sample archetypes include:
 
 As you can see from these samples, an archetype can satisfy a variety of needs. They often represents a set of infrastructure resources that an organization wants to deploy repeatedly through automation.
 
-Archetypes are defined in the toolkit using a JSON notation. Take a look at the [configuration for the sample shared services archetype](../archetypes/shared-services/config.test.json) for a represenative example.  Archetypes are located in the `archetypes` folder.
+Archetypes are defined in the toolkit using a JSON notation. Take a look at the [configuration for the sample shared services archetype](../archetypes/shared-services/archetype.test.json) for a represenative example.  Archetypes are located in the `archetypes` folder.
 
 <!-- TODO: document this notation -->
 
-The configuration file, typically named `config.json`, for an archetype contains arguments and a set of _modules_ that make up the archetype.
+The configuration file, typically named `archetype.json`, for an archetype contains arguments and a set of _modules_ that make up the archetype.
 
 ## Modules
 

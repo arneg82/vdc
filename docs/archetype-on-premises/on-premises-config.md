@@ -2,7 +2,7 @@
 
 ## Simulated on-premises deployment parameters
 
-These parameters are used to deploy the simulated on-premises environment (/archetypes/on-premises/config.json).
+These parameters are used to deploy the simulated on-premises environment (/archetypes/on-premises/archetype.json).
 
 ### Shared-services settings (on-premises parameters file)
 

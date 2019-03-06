@@ -1,6 +1,6 @@
 ### iaas deployment parameters (workload section)
 
-These parameters are specific to the [iaas example](../archetypes/iaas/parameters/config.test.json) workload deployment.
+These parameters are specific to the [iaas example](../archetypes/iaas/parameters/archetype.test.json) workload deployment.
 
 | **Parameter name**            | **Type**               | **Description**                                                                                                                                                                                                                                                                                                                                     |
 |-------------------------------|------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

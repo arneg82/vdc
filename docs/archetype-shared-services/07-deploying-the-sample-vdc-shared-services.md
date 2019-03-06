@@ -25,7 +25,7 @@ As discussed in the [parameter files](03-parameters-files.md#parameters-files) t
 
 To do this, navigate to the toolkit's [archetypes/shared services](../archetypes/shared services) folder, then make a copy of the *archetype.test.json*, and name this copy *archetype.json*. Then proceed to edit archetype.json providing the subscription, organization, networking, and other configuration information that you want to use for your deployment. Make sure you use values for the on-premises parameters consistent with the on-premises environment your shared services will be connected with.
 
-If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this config.json file from being pushed to your code repository.
+If your copy of the toolkit is associated with a git repository, the [.gitignore](../.gitignore) file provided by the default VDC Automation Toolkit is set to prevent this archetype.json file from being pushed to your code repository.
 
 ## Step 1: Deploy shared services operations and monitoring resources
 
@@ -42,15 +42,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "la"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "la"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "la"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "la"*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "la"*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "la"*
 
 This deployment creates the *{organization name}-{deployment name}-la-rg*
 resource group that hosts the resources described in the following table.
@@ -77,15 +77,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "shared-services-kv"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "shared-services-kv"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "shared-services-kv"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "shared-services-kv"*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "shared-services-kv"*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "shared-services-kv"*
 
 This deployment creates the *{organization name}-{deployment name}-kv-rg*
 resource group that hosts the resources described in the following table.
@@ -132,30 +132,30 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "nsg"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "nsg"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "nsg"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "nsg"*
 
 [Docker]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "nsg"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "nsg"*
 
 Then start the "net" deployment by running the following command in the terminal
 or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "shared-services-net"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "shared-services-net"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "shared-services-net"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "shared-services-net"*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "shared-services-net"*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "shared-services-net"*
 
 These deployments create the *{organization name}-{deployment name}-net-rg*
 resource group that hosts the resources described in the following table.
@@ -201,15 +201,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "vgw"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "vgw"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "vgw"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "vgw"*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "vgw"*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "vgw"*
 
 These deployments create the resources to the *{organization name}-{deployment
 name}-net-rg* resource group.
@@ -230,30 +230,30 @@ terminal or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "vgw-connection"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "vgw-connection"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "vgw-connection"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "vgw-connection"*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "vgw-connection"*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "vgw-connection"*
 
 Next, you'll enable the connection on the simulated on-premises side. To do this, start the "onprem-vgw-connection" deployment by running the following command in the
 terminal or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "onprem-vgw-connection"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "onprem-vgw-connection"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "onprem-vgw-connection"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "onprem-vgw-connection"*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "onprem-vgw-connection"*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "onprem-vgw-connection"*
 
 ## Step 5: Deploy management jump boxes
 
@@ -274,15 +274,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "jb" --upload-scripts*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "jb" --upload-scripts*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "jb" --upload-scripts*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "jb" --upload-scripts*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "jb" --upload-scripts*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "jb" --upload-scripts*
 
 Because the jump box virtual machines require post-deployment configuration
 using custom scripts, use the "--upload-scripts" argument when running the
@@ -335,15 +335,15 @@ command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "adds" --upload-scripts*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "adds" --upload-scripts*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "adds" --upload-scripts*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "adds" --upload-scripts*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "adds" --upload-scripts*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "adds" --upload-scripts*
 
 Because the ADDS virtual machines require post-deployment configuration using
 custom scripts, use the "--upload-scripts" argument when running the
@@ -387,15 +387,15 @@ or command-line interface:
 
 [Linux/OSX]
 
->   *python3 vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "azure-fw"*
+>   *python3 vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "azure-fw"*
 
 [Windows]
 
->   *py vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "azure-fw"*
+>   *py vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "azure-fw"*
 
 [Docker]
 
->   *python vdc.py create shared-services -path "archetypes/shared-services/config.json" -m "azure-fw"*
+>   *python vdc.py create shared-services -path "archetypes/shared-services/archetype.json" -m "azure-fw"*
 
 This deployment creates the following resources in the *{organization
 name}-{deployment name}-net-rg resource group*.
