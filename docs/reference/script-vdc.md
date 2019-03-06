@@ -39,15 +39,53 @@ type of the archetype you are deploying. More details about environment types ar
 There are several required and optional arguments that you can pass for a
 deployment:
 
-| Argument                    | Required | Description
-| :-                          | :-       | :-
-| `-path`<br>`--configuration-file-path` | required | Path pointing to the root parameters file for the shared services, workload, or simulated on-premises deployment you want to initiate.
-| `-m`                        | optional | Specifies which resource module to deploy. This value is limited to the list of resource types defined in the top-level shared services or workload parameters file's "resource-deployment-order" array. If this argument is not specified, the script processes each of the resources in the order they appear in the array. <br><br>Creating all resources requires the user running the script to have permissions to deploy all resource types. For shared services and workload deployments, omitting this parameter is only recommended for testing and development purposes, as a production VDC should make use of properly defined roles and separation of responsibility when deploying.<br><br>This argument should not be used when deploying a simulated on-premises environment.
-| `--module`                  |          |
+```
+-path
+--configuration-file-path
+```
 
+[Required] - Path pointing to the root parameters file for the archetype you want to deploy.
 
-| \-rg, --resource-group [Optional]     | Resource Group name (String). If specified, resources are created within this group. If the group does not exist, the script creates it. If this parameter is not specified, the script creates a resource group named using a combination of the organization name you set in your main parameters file and the resource type being deployed.      |
-| \-l, <br>--location <br>[Optional]            | Location (Azure Region name). Region used when deploying resources. If the region value in your main parameters file is blank, this parameter is required.       |
-| \--deploy-dependencies <br>[Optional] | Deploy resource module dependencies. If present, the script deploys any resource modules that are listed as dependencies for the resource you're currently deploying (defined in the top-level deployment parameters file's module-dependencies object). <br><br>If the user running this command does not have the correct permissions to run all of the dependent modules, setting this argument can generate errors. In addition, if the dependent resource modules have already been run for this deployment, the script redeploys these resources using the latest parameter values. |
-| \--upload-scripts <br>[Optional]          | Specifies if the scripts folder gets uploaded to the default storage account. Resource deployments will only upload the common toolkit scripts to Azure storage if this argument is included. It's important to use this when deploying any resources that depend on scripts to finish their configuration, like ADDS servers and NVAs. Note this will overwrite any existing scripts previously uploaded.                                                                        |
-| \--prevent-vdc-storage-creation <br>[Optional]      | By default, deployments will create a new storage account for output and scripts if one does not exist. Including this argument will prevent this, and only deploy if the target storage account exists. Storage account name is set in the top-level parameter files vdc-`storage-account-name` parameter.      |
+```
+-m
+--module
+```
+
+[Optional] - Specifies a single module within the archetype to deploy. This value is limited to the list of modulesin the `orchestration.modules-to-deploy` array of the archetype's configuration file.
+If this argument is not specified, the script processes each of the resources in the order they appear in the array.
+
+In a production environment, you should follow separation of responsibilities. This means that a single users is not likely to have rights to deploy all of the modules in an archetype.
+
+This argument should not be used when deploying a simulated on-premises environment.
+
+```
+-rg
+--resource-group 
+```
+
+[Optional] - Specifies the name of the resource group where th resources will be created. If the group does not exist, the script creates it. If this parameter is not specified, the script creates a resource group named using a combination of the organization name you set in your main parameters file and the resource type being deployed.
+
+```
+-l
+--location
+```
+
+[Optional] - Specifies the Azure region to use when deploying resources. If the region value in your main parameters file is blank, this parameter is required.
+
+```
+--deploy-dependencies
+```
+ [Optional] - Deploy module dependencies. If present, the script deploys any modules that are listed as dependencies for the module you're currently deploying. The dependencies for a modules are defined in each archetype's configuration file. Meaning that the dependencies for a module can vary by archetype. Look for the `dependencies` array in the module configuration in the archetype configuration file.
+
+If the user running this command does not have the correct permissions to run all of the dependent modules, setting this argument can generate errors. In addition, if the dependent modules have already been run for this deployment, the script *redeploys* these resources using the latest parameter values.
+
+```
+--upload-scripts
+```
+
+[Optional] - If present, the [scripts](../../scripts) folder gets uploaded to the default storage account. Resource deployments will only upload the common toolkit scripts to Azure storage if this argument is included. It's important to use this when deploying any resources that depend on scripts to finish their configuration, like ADDS servers and NVAs. Note this will overwrite any existing scripts previously uploaded.
+
+```
+--prevent-vdc-storage-creation
+```
+[Optional] - By default, deployments will create a new storage account for output and scripts if one does not exist. Including this argument will prevent this, and only deploy if the target storage account exists. Storage account name is set in the archetype configuration file in the `vdc-storage-account-name` parameter.
