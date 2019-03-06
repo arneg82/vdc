@@ -2,9 +2,7 @@
 
 We recommend using the Docker image to run the toolkit. The Docker image will provide all of the prerequisites for running the toolkit, including the Azure CLI.
 
-> If you prefer to run the toolkit wihout Docker, please see these [instructions](./running-locally.md).
-
-<!-- TODO: add instructions for setting up the admin VM -->
+> If you prefer to run the toolkit wihout Docker, please see these [instructions](./setup-local.md).
 
 The basic steps are:
 1. Download the source files for the toolkit
@@ -80,13 +78,8 @@ These folders are explicitly ignored in the [.dockerignore](../.dockerignore) fi
 
 The recommended usage pattern is to mount the needed folders when running the image. However, if you prefer not to mount local volumes, remove `.dockerignore` file and rebuild the Docker image to include any new changes made to your local copy of modules, archetypes and tests files.
 
-<!-- 
-TODO: I need to understand the motivations here^ better
-What's the problem with mounting the whole repo? 
--->
-
 ## Next steps
 
-> Throughout the documentation, be sure to use the commands labelled `[Docker]`.
+> Throughout the remainder of this documentation, be sure to use the commands labelled `[Docker]`.
 
 You are now ready to start [your first deployment](your-first-deployment.md).
