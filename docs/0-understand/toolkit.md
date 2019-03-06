@@ -53,6 +53,4 @@ The toolkit provides three additional scripts for managing your Azure environmen
 
 ## Next steps
 
-- General use of the toolkit requires an understanding of a some [essential Azure concepts](azure.md).
-
-<!-- TODO: link to next steps -->
+Learn about the [deployment types](deployment-types.md) in the toolkit.
